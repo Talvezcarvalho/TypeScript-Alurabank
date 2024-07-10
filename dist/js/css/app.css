@@ -1,8 +1,8 @@
-@import url("base/_normalize.css");
-@import url("base/_base.css");
-@import url("base/_form.css");
-@import url("componentes/_cabecalho.css");
-@import url("componentes/_menu.css");
-@import url("componentes/_extrato.css");
-@import url("componentes/_nova-transacao.css");
-@import url("componentes/_saldo.css");
+@import url("dist/js/css/base/_normalize.css");
+@import url("dist/js/css/base/_base.css");
+@import url("dist/js/css/base/_form.css");
+@import url("dist/js/css/componentes/_cabecalho.css");
+@import url("dist/js/css/componentes/_menu.css");
+@import url("dist/js/css/componentes/_extrato.css");
+@import url("dist/js/css/componentes/_nova-transacao.css");
+@import url("dist/js/css/componentes/_saldo.css");
