@@ -12,6 +12,7 @@ if (elementoDataAcesso) {
 
 
 renderizarSaldo();
+
  function renderizarSaldo(): void {
     if ( elementoSaldo ) {
         elementoSaldo.textContent = formatarMoeda(Conta.getSaldo());

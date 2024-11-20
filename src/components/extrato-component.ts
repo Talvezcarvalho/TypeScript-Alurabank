@@ -6,11 +6,16 @@ import { formatarData, formatarMoeda } from "../utils/Formatter.js";
 const elementoRegistroTransacoesExtrato = document.querySelector(
   ".extrato .registro-transacoes"
 );
+
 renderizarExtrato();
 function renderizarExtrato(): void {
   const gruposTransacoesExtrato: GrupoTransacao[] = Conta.getGruposTransacoes();
-  elementoRegistroTransacoesExtrato.innerHTML = "";
+  elementoRegistroTransacoesExtrato.innerHTML = ``;
   let htmlRegistroTransacoes: string = "";
+  if(gruposTransacoesExtrato.length >=1) {
+    const apagarTitulo = ()=> { document.querySelector('.extrato h4').setAttribute('style', 'display: none')}; 
+    apagarTitulo();
+  }
 
   for (let grupoTransacao of gruposTransacoesExtrato) {
     let htmlTransacaoItem: string = "";
@@ -33,3 +38,11 @@ function renderizarExtrato(): void {
   }
   elementoRegistroTransacoesExtrato.innerHTML = htmlRegistroTransacoes;
 }
+
+const ExtratoComponent = {
+  atualizar(): void {
+    renderizarExtrato();
+  }
+}
+
+export default ExtratoComponent;
